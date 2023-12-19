@@ -1,0 +1,105 @@
+/* Adapte conforme necessário */
+
+.contato {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.contato-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.texto-h2 {
+    font-size: 2.5rem;
+    color: var(--blue);
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    /* border: 1px solid #ddd; */
+    border: 1px solid var(--blue); /* Altera a cor da borda para azul */
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--blue);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.contato-btn {
+    padding: 15px 45px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.contato-btn:hover {
+    background: #04234b;
+}
+
+/* Estilo adicional para feedback de envio do formulário */
+.mensagem-envio {
+    color: #2ecc71;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup-mensagem {
+    font-size: 1.2rem;
+    color: #2ecc71; /* Cor verde de sucesso */
+    margin-bottom: 10px;
+}
+
+.popup-fechar {
+    padding: 10px 20px;
+    background: #2ecc71; /* Cor verde de sucesso */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.popup-fechar:hover {
+    background: #27ae60; /* Cor mais escura de verde */
+}

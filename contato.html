@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contato.css">
+    <title>Enzo Games - Contato</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navegacao">
+            <a href="#" class="logo">E<span>nz</span>O G<span>ame</span>S</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Contato</a>
+                </li>
+                <i class='bx bx-search'></i>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contato">
+            <div class="contato-form">
+                <h2 class="texto-h2">Entre em contato</h2>
+                <form action="processar_formulario.php" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+
+                    <button type="submit" class="contato-btn">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            exibirPopupSucesso();
+        });
+
+        function exibirPopupSucesso() {
+            const popup = document.createElement('div');
+            popup.classList.add('popup');
+
+            popup.innerHTML = `
+                <p class="popup-mensagem">Mensagem enviada com sucesso!</p>
+                <button id="fecharPopup" class="popup-fechar">Fechar</button>
+            `;
+
+            document.body.appendChild(popup);
+
+            document.getElementById('fecharPopup').addEventListener('click', function () {
+                fecharPopup();
+                limparFormulario();
+            });
+        }
+
+        function fecharPopup() {
+            const popup = document.querySelector('.popup');
+            popup.remove();
+        }
+
+        function limparFormulario() {
+            form.reset();
+        }
+    });
+</script>
