@@ -1,8 +1,3 @@
-.linha {
-    border-top: 2px solid var(--blue);
-    margin-top: 20px; /* Ajusta a margem para melhor visualização da linha */
-}
-
 .contato {
     padding: 100px 10%;
     text-align: center;
@@ -118,8 +113,5 @@ textarea {
     }
     .contato {
         padding: 100px 10%;
-    }
-    .linha {
-        margin-top: 150px;
     }
 }
